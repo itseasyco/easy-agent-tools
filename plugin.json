@@ -1,0 +1,35 @@
+{
+  "$schema": "https://agent-plugins.org/schema/v1/plugin.json",
+  "name": "easy-agent-tools",
+  "displayName": "Easy payments",
+  "version": "0.1.0",
+  "description": "Skills and agent guidance for Easy (itseasy.co): query merchant payments data over MCP, walk through the merchant application, and read published pricing.",
+  "author": {
+    "name": "Easy Labs, Inc.",
+    "email": "support@itseasy.co",
+    "url": "https://www.itseasy.co"
+  },
+  "homepage": "https://www.itseasy.co/developers",
+  "repository": "https://github.com/itseasyco/easy-agent-tools",
+  "license": "MIT",
+  "keywords": ["payments", "mcp", "stablecoins", "ach", "cards", "easy"],
+  "skills": [
+    "skills/easy-payments-data/SKILL.md",
+    "skills/easy-merchant-application/SKILL.md",
+    "skills/easy-site-and-pricing/SKILL.md"
+  ],
+  "mcp": {
+    "remotes": [
+      {
+        "name": "easy",
+        "url": "https://mcp.itseasy.co/mcp",
+        "transport": "streamable-http"
+      },
+      {
+        "name": "easy-site",
+        "url": "https://www.itseasy.co/api/mcp",
+        "transport": "streamable-http"
+      }
+    ]
+  }
+}
