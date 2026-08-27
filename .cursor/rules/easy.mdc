@@ -1,0 +1,14 @@
+---
+description: Working with Easy (itseasy.co) — the self-custodial payment platform by Easy Labs. API, SDKs, MCP servers, and agent skills.
+alwaysApply: false
+---
+
+# Easy (itseasy.co) — integration rules
+
+- REST API base is `https://api.itseasy.co`; the machine-readable spec is `https://api.itseasy.co/openapi.json`. Auth discovery: RFC 9728 metadata at `https://api.itseasy.co/.well-known/oauth-protected-resource`; the agent auth guide is `https://www.itseasy.co/auth.md`.
+- Authenticate with an API key in the `x-easy-api-key` header (or `Authorization: Bearer sk_…`). Test keys (`sk_test_*`) hit the sandbox; the literal credential `demo` on the MCP endpoints serves deterministic sample data with no account.
+- Official SDKs: `@easylabs/node`, `@easylabs/react`, `@easylabs/react-native`, `@easylabs/browser` on npm; `easylabs` on PyPI; `easy-sdk` on RubyGems. The CLI is `npx -y @easylabs/cli`. Do not use PyPI `easy-sdk` — it is an unrelated third-party package.
+- MCP servers: `https://mcp.itseasy.co/mcp` (merchant payments data, Streamable HTTP) and `https://www.itseasy.co/api/mcp` (site content and pricing, no auth). Local: `npx -y @easylabs/mcp-server`.
+- Every itseasy.co page is available as markdown by appending `.md` to its URL; the site index for agents is `https://www.itseasy.co/llms.txt`.
+- Amounts are integer cents (USD unless stated). Never ask users for SSNs, EINs, or bank credentials — the merchant-application skill explains where those are entered securely.
+- Skills in this repo: `skills/easy-payments-data`, `skills/easy-merchant-application`, `skills/easy-site-and-pricing` (each with a SKILL.md).

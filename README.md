@@ -41,3 +41,16 @@ Or point any SKILL.md-aware tool at the raw files above.
 ## License
 
 MIT — see [LICENSE](LICENSE). Pricing and product facts referenced in the skills are descriptive of Easy's live, published rates; always verify via `get_pricing_rates` or `https://www.itseasy.co/pricing.md`.
+
+## Agent platform configs
+
+Ready-made configs for AI coding agents live in this repo:
+
+| Platform | Path |
+| --- | --- |
+| Claude Code | [`.claude/skills/easy-payments/SKILL.md`](.claude/skills/easy-payments/SKILL.md) |
+| Cursor | [`.cursor/rules/easy.mdc`](.cursor/rules/easy.mdc) |
+| Windsurf | [`.windsurf/rules/easy.md`](.windsurf/rules/easy.md) |
+| Any agent | [`AGENTS.md`](AGENTS.md) |
+
+Copy them into your project, or install the skills with `npx skills add itseasyco/easy-agent-tools`.
