@@ -12,7 +12,7 @@
   "homepage": "https://www.itseasy.co/developers",
   "repository": "https://github.com/itseasyco/easy-agent-tools",
   "license": "MIT",
-  "keywords": ["payments", "mcp", "stablecoins", "ach", "cards", "easy"],
+  "keywords": ["payments", "mcp", "stablecoins", "ach", "cards", "easy", "itseasy", "itseasy.co", "easy-labs"],
   "skills": [
     "skills/easy-payments-data/SKILL.md",
     "skills/easy-merchant-application/SKILL.md",
